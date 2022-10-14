@@ -7,11 +7,12 @@
     --text-color:#757575;
     --title-color: #212121;
     --button-active: #188CE8; 
-    --adress-color: rgba(255, 255, 255, 0.6);
+    --address-color: rgba(255, 255, 255, 0.6);
     --button-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
     --team-member-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
     --hero-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     --card-gap: 30px;
+    --card-border: 1px solid #EEEEEE;
 }
 
 *,
@@ -38,9 +39,9 @@ ul {
     padding: 0;
 }
 
-h1, h2, h3 {
+h1, h2, h3, p {
     margin: 0;
-    padding: 0;
+
 }
 
 .container {
@@ -74,7 +75,7 @@ color: var(--black-color);
 .logo span {color: var(--brand-color)}
 
 .link,
-.adress {text-decoration: none;
+.address {text-decoration: none;
 font-style: normal;
 }
 
@@ -86,7 +87,15 @@ letter-spacing: 0.02em;
 color: var(--title-color);
 }
 
+.contact {
+    color: var(--text-color);
+    line-height: 1.14;
+}
 
+.nav, .contact {
+    display: inline-block;
+    padding: 32px 0;
+}
 
   
 .container.top {
@@ -113,11 +122,8 @@ margin-right: 50px;
 margin-left:0;
 }
 
-.container .logo {
-   margin-top: 24px; 
-   margin-bottom: 25px;
+.header .logo {
    margin-right: 93px;
-   margin-left: 0;
 }
 
 
@@ -130,19 +136,16 @@ margin-left:0;
 .nav:focus,
 .contact:hover,
 .contact:focus,
-.adress:hover,
-.adress:focus,
-.adress.map:hover,
-.adress.map:focus,
+.address:hover,
+.address:focus,
+.address.map:hover,
+.address.map:focus,
 .current {color:var(--brand-color)}
 
-.contact {
-    color: var(--text-color);
-    line-height: 1.14;
-}
 
 
-.header {border: 1px solid #ECECEC;}
+
+.header {border-bottom: 1px solid #ECECEC;}
 
 /* HERO */
 
@@ -150,6 +153,7 @@ margin-left:0;
 .hero {
     background-color: var(--background-color);
     text-align: center;
+    padding: 200px 0;
 }
 
 .hero-title {
@@ -175,6 +179,7 @@ cursor: pointer;
 box-shadow: var(--hero-button-shadow);
 border-radius: 4px;
 border-color:transparent;
+padding: 10px 32px;
 }
 
 .hero-button:hover,
@@ -183,6 +188,10 @@ border-color:transparent;
 }
 
 /* НАШІ ПЕРЕВАГИ */
+
+.adv.section {
+    padding-bottom:0;
+}
 
 .advantage {
     color: var(--title-color);
@@ -202,7 +211,7 @@ margin-bottom: 10px;
 
 .advantages-list {
     display: flex;
-    margin-right: calc(-1 * var(--card-gap));
+    /* margin-right: calc(-1 * var(--card-gap)); */
 
   
 }
@@ -211,7 +220,7 @@ margin-bottom: 10px;
     flex-basis: calc(100% - 90px / 4);
 }
 
-.advantages-list .item {
+.advantages-list .item:not(:last-child) {
     margin-right: var(--card-gap);
 }
 
@@ -231,9 +240,9 @@ margin-top: 0;
 .job-list {
     display: flex;
     justify-content: center;
-    margin-right: calc(-1 * var(--card-gap));;
+    /* margin-right: calc(-1 * var(--card-gap)); */
 }
-.job-list .item {
+.job-list .item:not(:last-child) {
     margin-right: var(--card-gap);
     }
 
@@ -264,7 +273,6 @@ margin-bottom: 50px;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
-    margin-top: var(--card-gap);
     margin-bottom: 10px;
    
     
@@ -273,7 +281,7 @@ margin-bottom: 50px;
 .member-list {
     display: flex;
     justify-content: center;
-    margin-right: calc(-1 * var(--card-gap));;
+    /* margin-right: calc(-1 * var(--card-gap)); */
 }
 
 
@@ -284,7 +292,7 @@ margin-bottom: 50px;
     box-shadow: var(--team-member-shadow);
 }
 
-.member-list > .item {
+.member-list > .item:not(:last-child) {
     margin-right: var(--card-gap);
 }
 
@@ -293,9 +301,12 @@ margin-bottom: 50px;
 .description {
     font-size: 16px;
 line-height: 1.19;
-margin-bottom: var(--card-gap);
-
 }
+
+.member-div {
+    padding: 30px 0;
+}
+
 
 /* ФУТЕР */
 
@@ -310,25 +321,26 @@ padding: 60px 0;
 
 }
 
-.adress.map {
+.address.map {
     color: var(--white-color);
     line-height: 1.71;
 }
 
-.adress {
-    color: var(--adress-color);
-line-height: 1.71;
-
-}
-
-.adress-list {
+.address {
     margin-top: 20px;
+    color: var(--address-color);
+line-height: 1.71;
 }
 
-.adress-list .item:not(:last-child) {
+
+
+.address-list .item:not(:last-child) {
     margin-bottom: 9px;
 }
 
+address {
+    margin-top: 20px;
+}
 
 /* ПОРТФОЛІО */
 
@@ -347,7 +359,7 @@ background-color: var(--section-color);
 cursor: pointer; 
 border-radius: 4px;
 border-color: transparent;
-margin-right: 8px;
+
 padding: 6px 22px;
 
 }
@@ -356,7 +368,11 @@ padding: 6px 22px;
     display: flex;
     margin-bottom: 50px;
     justify-content: center;
-   
+}
+
+
+.list.btn > .item:not(:last-child) {
+   margin-right: 8px;
 }
 
 .card-list{
@@ -374,7 +390,7 @@ padding: 6px 22px;
     flex-basis: calc((100% - 60px) / 3);
     margin-right: var(--card-gap);
     margin-bottom: var(--card-gap);
-    border: 1px solid #EEEEEE;
+  
 }
 
 
@@ -404,16 +420,23 @@ padding: 6px 22px;
 font-size: 18px;
 line-height: 2;
 letter-spacing: 0.06em;
-margin: 20px 0 4px 24px;
+margin-bottom: 4px;
 }
 
 .project-description {
     color: var(--text-color);
     font-size: 16px;
     line-height: 1.88;
-    margin: 0 0 20px 24px;
-    
+  
 } 
+
+
+.card-div {
+    padding: 20px 24px;
+    border-left: var(--card-border);
+    border-right: var(--card-border);
+    border-bottom: var(--card-border);
+}
 
 .visually-hidden {
     position: absolute;

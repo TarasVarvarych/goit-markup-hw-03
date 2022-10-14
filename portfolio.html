@@ -55,15 +55,19 @@
         <h1 class="visually-hidden">Наше портфоліо</h1>
         <div class="container">
           <ul class="list btn">
-            <li><button type="button" class="filter-button">Усі</button></li>
-            <li>
+            <li class="item">
+              <button type="button" class="filter-button">Усі</button>
+            </li>
+            <li class="item">
               <button type="button" class="filter-button">Веб-сайти</button>
             </li>
-            <li>
+            <li class="item">
               <button type="button" class="filter-button">Додатки</button>
             </li>
-            <li><button type="button" class="filter-button">Дизайн</button></li>
-            <li>
+            <li class="item">
+              <button type="button" class="filter-button">Дизайн</button>
+            </li>
+            <li class="item">
               <button type="button" class="filter-button">Маркетинг</button>
             </li>
           </ul>
@@ -77,8 +81,10 @@
                   alt="Веб сторінка"
                   width="370"
                 />
-                <h2 class="project">Технокряк</h2>
-                <p class="project-description">Веб-сайт</p>
+                <div class="card-div">
+                  <h2 class="project">Технокряк</h2>
+                  <p class="project-description">Веб-сайт</p>
+                </div>
               </a>
             </li>
             <li class="card">
@@ -88,8 +94,10 @@
                   alt="Бостер з баскетболістами"
                   width="370"
                 />
-                <h2 class="project">Постер New Orlean vs Golden Star</h2>
-                <p class="project-description">Дизайн</p>
+                <div class="card-div">
+                  <h2 class="project">Постер New Orlean vs Golden Star</h2>
+                  <p class="project-description">Дизайн</p>
+                </div>
               </a>
             </li>
             <li class="card">
@@ -99,8 +107,10 @@
                   alt="Логотип ресторану"
                   width="370"
                 />
-                <h2 class="project">Ресторан Seafood</h2>
-                <p class="project-description">Додаток</p>
+                <div class="card-div">
+                  <h2 class="project">Ресторан Seafood</h2>
+                  <p class="project-description">Додаток</p>
+                </div>
               </a>
             </li>
             <li class="card">
@@ -110,15 +120,19 @@
                   alt="Чорні навушники"
                   width="370"
                 />
-                <h2 class="project">Проєкт Prime</h2>
-                <p class="project-description">Маркетинг</p>
+                <div class="card-div">
+                  <h2 class="project">Проєкт Prime</h2>
+                  <p class="project-description">Маркетинг</p>
+                </div>
               </a>
             </li>
             <li class="card">
               <a class="link" href="">
                 <img src="./images/boxes.jpg" alt="Дві коробки" width="370" />
-                <h2 class="project">Проєкт Boxes</h2>
-                <p class="project-description">Додаток</p>
+                <div class="card-div">
+                  <h2 class="project">Проєкт Boxes</h2>
+                  <p class="project-description">Додаток</p>
+                </div>
               </a>
             </li>
             <li class="card">
@@ -128,8 +142,10 @@
                   alt="Веб сторінка"
                   width="370"
                 />
-                <h2 class="project">Inspiration has no Borders</h2>
-                <p class="project-description">Веб-сайт</p>
+                <div class="card-div">
+                  <h2 class="project">Inspiration has no Borders</h2>
+                  <p class="project-description">Веб-сайт</p>
+                </div>
               </a>
             </li>
             <li class="card">
@@ -139,8 +155,10 @@
                   alt="Дизайнерська книга"
                   width="370"
                 />
-                <h2 class="project">Видання Limited Edition</h2>
-                <p class="project-description">Дизайн</p>
+                <div class="card-div">
+                  <h2 class="project">Видання Limited Edition</h2>
+                  <p class="project-description">Дизайн</p>
+                </div>
               </a>
             </li>
             <li class="card">
@@ -150,8 +168,10 @@
                   alt="Підвіска з надписом"
                   width="370"
                 />
-                <h2 class="project">Проєкт LAB</h2>
-                <p class="project-description">Маркетинг</p>
+                <div class="card-div">
+                  <h2 class="project">Проєкт LAB</h2>
+                  <p class="project-description">Маркетинг</p>
+                </div>
               </a>
             </li>
             <li class="card">
@@ -161,8 +181,10 @@
                   alt="Ноутбук з відкритим додатком"
                   width="370"
                 />
-                <h2 class="project">Growing Business</h2>
-                <p class="project-description">Додаток</p>
+                <div class="card-div">
+                  <h2 class="project">Growing Business</h2>
+                  <p class="project-description">Додаток</p>
+                </div>
               </a>
             </li>
           </ul>
@@ -173,10 +195,10 @@
       <div class="container">
         <a class="logo" href="./index.html"><span>Web</span>Studio</a>
         <address>
-          <ul class="adress-list list">
+          <ul class="address-list list">
             <li class="item">
               <a
-                class="adress map"
+                class="address map"
                 href="https://goo.gl/maps/QpQrC3i5Bw5wUQtb8"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -184,12 +206,12 @@
               >
             </li>
             <li class="item">
-              <a class="adress" href="mailto:info@devstudio.com"
+              <a class="address" href="mailto:info@devstudio.com"
                 >info@devstudio.com</a
               >
             </li>
             <li class="item">
-              <a class="adress" href="tel:+380961111111">+38 096 111 11 11</a>
+              <a class="address" href="tel:+380961111111">+38 096 111 11 11</a>
             </li>
           </ul>
         </address>
